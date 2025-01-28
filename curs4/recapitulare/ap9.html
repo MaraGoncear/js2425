@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        let myDemo = document.getElementById('demo');
+       //Array cu obiecte
+       const tari =[
+       {
+        name: 'Afghanistan',
+        capital: 'Kabul',
+        languages: ['Pashto', 'Uzbek', 'Turkmen'],
+        population: 27657145,
+        falg: 'https://restcountries.eu/data/afg.svg',
+        currency: 'Afghan afghani'
+       },
+       {
+        name: 'Aland Islands',
+        capital: 'Mariehamn',
+        languages: ['Swedish'],
+        population: 28875,
+        falg: 'https://restcountries.eu/data/ala.svg',
+        currency: 'Euro'
+       }
+    ]
+    myDemo.innerHTML =`
+    <p> Nume : ${tari[0]} </p> 
+    <p> Capitala: ${tari[0].capital} </p>
+    `;
+    
+    console.log(tari[0].name);
+    </script>
+</body>
+</html>

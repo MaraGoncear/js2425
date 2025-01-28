@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+       function salut(id){
+        id.innerHTML='Acesta este un mesaj scris din javascript!';
+       }
+    </script>
+</head>
+<body>
+    
+    <h2>Prima mea pagina</h2>
+
+    <p id="myid"></p>
+    <!-- <p id="myid2"></p> -->
+     //este foarte important sa efectuam navigarea dupa introducerea elementelor HTML, nu inaintea lor
+     <script>
+        var id = document.getElementById("myid");
+        salut(id, 'Salut 1');
+        salut(id, 'Salut 2');
+        function salut(id, mess){
+            id.innerHTML=mess;
+        }
+        // Ce se intimpla daca se apeleaza inca odata functia? salut(id);
+        var id2 = document.getElementById("myid2");
+        salut(id2, 'Salut3');
+     </script>
+</body>
+</html>
