@@ -8,21 +8,32 @@
 <body>
     <script>
          function produsNou(nume, pret, stoc, dataFabricarii){
-            this.nume = nume;
-            this.pret = pret;
-            this.stoc = stoc;
-            this.dataFabricarii = dataFabricarii;
-            this.afiseaza = function () {
-                console.log(`Produsul ${this.nume}) are pretul de ${this.pret} lei`)
+            const obj{};
+            obj.nume = nume;
+            obj.pret = pret;
+            obj.stoc = stoc;
+            obj.dataFabricarii = dataFabricarii;
+            obj.afiseaza = function () {
+                console.log(`Produsul ${obj.nume}) costa ${obj.pret} lei`)
+                console.log(`Produsul ${this.nume}) costa ${this.pret} lei`)
             },
-                this.cumpara = function () {
+                obj.cumpara = function () {
                     if (this.stoc > 0){
-                        this.stoc -= 1;
+                        this.stoc -= 1; //this.stoc = this.stoc - 1
                         console.log(`Produsul ${this.nume}  afost adaugat in cos`)
                         console.log('Produsul' + this.nume + 'a fost' + 'adaugat in cos')
                     }
                 }
+                return obj;
          }
+         const paine = produsNou('Paine', 8, 36, '2020-02-22');
+         paine.afiseaza();
+         paine.cumpara();
+         console.log(paine.nume);
+         const produs2 = produsNou('Apa minerala Borsec', 3.5, 100, '2025-01-01');
+         produs2.afiseaza();
+         console.log(paine['nume']);
+         paine.nume = 'Paine cu Maia';
     </script>
 </body>
 </html>
