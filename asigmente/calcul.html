@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./calcul.js"></script>
+</head>
+<body>
+    <style>
+       h1{
+        color: green;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+       }
+       input{
+        border-radius: 5px;
+        background-color: yellow;
+       }
+       #operations{
+        background-color: greenyellow;
+       }
+       button{
+        background-color: greenyellow;
+       }
+     
+    </style>
+
+    <h1>Faceti calcule cu operatii!</h1>
+
+    <input type="text" id="number1">
+    <br><br>
+    <select id="operations">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="/">/</option>
+        <option value="*">*</option>
+    </select>
+    <br><br>
+    <input type="text" id="number2">
+    <br><br>
+    <button onclick="calc()">=</button>
+    <input type="text" id="result">
+    
+
+</body>
+</html>

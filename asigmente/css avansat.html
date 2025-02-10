@@ -17,17 +17,16 @@
        #second-div p:nth-child(odd){
         color: blue;
        }
-       body p:nth-of-type(3):hover{
+        p:nth-child(8):hover{
+        font-style: italic;
+        cursor: none;
+       }
+       #first-div > p::after {
+        content: "-NEW";
+        color: yellow;
         font-style: italic;
        }
-       #first-div p:first-of-type:after {
-        content: "NOW";
-        color: yellow;
-       }
-       #first-div p:last-of-type::after {
-        content: "NOW";
-        color: yellow;
-    }
+ 
     </style>
 </head>
 
